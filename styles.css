@@ -32,19 +32,33 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.blinky-dancer{
+.blinkyDancer{
   border:10px solid aqua;
-  border-radius:10px;
+  border-radius:30px;
+  position:absolute;
+
+}
+
+.roamingDancer{
+  border:20px solid orange;
   position:absolute;
 }
 
-.roaming-dancer{
-  border:20px solid yellow;
+.weavingDancer{
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  
+  border-bottom: 30px solid yellow;
   position:absolute;
 }
 
-.circling-dancer{
-  border:20px solid yellow;
-  position:absolute;
+#lineUp{
+  width: 100px;
+  text-align: center;
+  background-color: grey;
+  padding:5px 12px;
+  float:right;
 }
 

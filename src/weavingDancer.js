@@ -1,22 +1,22 @@
-var makeCirclingDancer = function(top, left, timeBetweenSteps) {
+var makeWeavingingDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
 
   // debugger;
   //this.oldStep = makeDancer.prototype.step;
   //this.step();
-  this.$node = $('<span class="circling-dancer"></span>');
-  this.setPosition(top, left);
+  this.$node = $('<span class="weavingDancer"></span>');
+  this.setPosition(top, 0);
   
 };
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
-makeCirclingDancer.prototype = Object.create(makeDancer.prototype);
+makeWeavingingDancer.prototype = Object.create(makeDancer.prototype);
 
 
-makeCirclingDancer.prototype.constructor = makeCirclingDancer;
+makeWeavingingDancer.prototype.constructor = makeWeavingingDancer;
 
-makeCirclingDancer.prototype.step = function() {
+makeWeavingingDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
   makeDancer.prototype.step.call(this);
   
@@ -32,5 +32,19 @@ makeCirclingDancer.prototype.step = function() {
   // }, 5000, function() {
   //   // Animation complete.
   // });
-  this.$node.toggle();
+  var width = $(document).width();
+  var goUp = this.$node.animate({
+    top: "+=100",
+    left: 0,
+    left: "+=200"
+  }, 1000, function(goDown) {
+    // Animation complete.
+  });
+
+  var goDown = this.$node.animate({
+    top: "-=100",
+    left: "+=200"
+  }, 1000, function(goUp) {
+    // Animation complete.
+  });
 };

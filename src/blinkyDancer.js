@@ -4,7 +4,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // debugger;
   //this.oldStep = makeDancer.prototype.step;
   //this.step();
-  this.$node = $('<span class="blinky-dancer"></span>');
+  this.$node = $('<span class="blinkyDancer"></span>');
   this.setPosition(top, left);
   
 };
@@ -26,6 +26,21 @@ makeBlinkyDancer.prototype.step = function() {
   //this.$node = $('<span class="blinky-dancer"></span>');
 
   this.$node.toggle();
+  // var getBig = this.$node.animate({
+  //   //"borderWidth": 500,
+  //   //"borderRadius": 500,
+  //   opacity: 100
+  // }, 1000, function(getSmall) {
+  //   // Animation complete.
+  // });
+
+  // var getSmall = this.$node.animate({
+  //   //"border-width": "100px",
+  //   //"border-radius": "100px",
+  //   opacity: 50
+  // }, 1000, function(getBig) {
+  //   // Animation complete.
+  // });
 };
 
 
