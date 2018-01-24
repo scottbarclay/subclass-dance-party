@@ -49,6 +49,31 @@ $(document).ready(function() {
     }
   });
 
+  // var collision = function() {
+  //   for (var i = 0; i < window.dancers.length; i++) {
+  //     console.log(window.dancers[i].left); 
+  //   }
+  // };
+
+  setInterval(function() {
+    var test = document.getElementsByClassName('weavingDancer');
+    console.log(window.dancers);
+    var leftCoord = window.dancers[0].left;
+    var topCoord = window.dancers[0].top;
+  //   window.dancers.filter(function(value) {
+  //     return value
+  // });
+    
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      
+
+      if (spin === 'weavingDancer') {
+        console.log('true');
+      }
+    }
+  }, 1000);
+
   // $(".dancer").on('mouseenter', function(event) {
   //   $(this).css('color', 'green');
   // });
