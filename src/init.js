@@ -2,6 +2,7 @@ $(document).ready(function() {
   window.dancers = [];
 
   $('.addDancerButton').on('click', function(event) {
+    //debugger;
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -29,10 +30,10 @@ $(document).ready(function() {
     // var lineThemUpFunction = window[lineThemUpFunctionName];
     
 
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+  var dancer = new dancerMakerFunction(
+    $("body").height() * Math.random(),
+    $("body").width() * Math.random(),
+    Math.random() * 1000
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
@@ -55,24 +56,24 @@ $(document).ready(function() {
   //   }
   // };
 
-  setInterval(function() {
-    var test = document.getElementsByClassName('weavingDancer');
-    console.log(window.dancers);
-    var leftCoord = window.dancers[0].left;
-    var topCoord = window.dancers[0].top;
-  //   window.dancers.filter(function(value) {
-  //     return value
-  // });
+  // setInterval(function() {
+  //   var test = document.getElementsByClassName('weavingDancer');
+  //   console.log(window.dancers);
+  //   var leftCoord = window.dancers[0].left;
+  //   var topCoord = window.dancers[0].top;
+  // //   window.dancers.filter(function(value) {
+  // //     return value
+  // // });
     
 
-    for (var i = 0; i < window.dancers.length; i++) {
+  //   for (var i = 0; i < window.dancers.length; i++) {
       
 
-      if (spin === 'weavingDancer') {
-        console.log('true');
-      }
-    }
-  }, 1000);
+  //     if (spin === 'weavingDancer') {
+  //       console.log('true');
+  //     }
+  //   }
+  // }, 1000);
 
   // $(".dancer").on('mouseenter', function(event) {
   //   $(this).css('color', 'green');
