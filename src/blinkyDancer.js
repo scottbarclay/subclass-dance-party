@@ -4,7 +4,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // debugger;
   //this.oldStep = makeDancer.prototype.step;
   //this.step();
-  this.$node = $('<span class="blinkyDancer"></span>');
+  this.$node = $('<span class="dancer blinkyDancer"></span>');
   this.setPosition(top, left);
   
 };
@@ -12,7 +12,6 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // so we must keep a copy of the old version of this function
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-
 
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 

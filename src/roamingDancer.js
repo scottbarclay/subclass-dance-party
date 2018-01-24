@@ -4,8 +4,8 @@ var makeRoamingDancer = function(top, left, timeBetweenSteps) {
   // debugger;
   //this.oldStep = makeDancer.prototype.step;
   //this.step();
-  this.$node = $('<span class="roamingDancer"></span>');
-  this.setPosition(0, left);
+  this.$node = $('<span class="dancer roamingDancer"></span>');
+  this.setPosition(top, 0);
   
 };
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -24,20 +24,33 @@ makeRoamingDancer.prototype.step = function() {
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   //this.$node = $('<span class="blinky-dancer"></span>');
+  // this.$node.toggle();
+  
+
+
+
+  var width = $(document).width();
 
   var goRight = this.$node.animate({
     opacity: 0.5,
-    left: "+=50",
+    left: "+=100",
     //height: "toggle"
-  }, 1000, function(goLeft) {
+  }, 100, function() {
+    // var windowWidth = $(window).width();
+    // if (this.$node.css("left") === windowWidth - 20) {
+    //   debugger;
+    //   goLeft();
+    // }
+    // goLeft();
+    // }
     // Animation complete.
   });
-
+  
   var goLeft = this.$node.animate({
     opacity: 0.5,
     left: "-=50",
     //height: "toggle"
-  }, 1000, function(goRight) {
+  }, 100, function() {
     // Animation complete.
   });
 };

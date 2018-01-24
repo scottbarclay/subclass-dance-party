@@ -37,6 +37,24 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-// now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
+makeDancer.prototype.stop = function() {
+  this.$node.finish();
+};
+
+// makerDancer.prototype.hover = function() {
+//   this.css("color", "green");
+// };
+
+
+makeDancer.prototype.lineEmUp = function() {
+  this.setPosition(top, 0);
+};
+
+// when we instantiate a 'dancer', 
+// every dancer should have a lineup function where called upon, will lineup 
+
+// now that we have defined the dancer object, 
+// we can start setting up important parts of it by calling 
+// the methods we wrote
 // this one sets the position to some random default point within the body
 

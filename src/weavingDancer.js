@@ -4,7 +4,7 @@ var makeWeavingingDancer = function(top, left, timeBetweenSteps) {
   // debugger;
   //this.oldStep = makeDancer.prototype.step;
   //this.step();
-  this.$node = $('<span class="weavingDancer"></span>');
+  this.$node = $('<span class="dancer weavingDancer"></span>');
   this.setPosition(top, 0);
   
 };
@@ -32,10 +32,14 @@ makeWeavingingDancer.prototype.step = function() {
   // }, 5000, function() {
   //   // Animation complete.
   // });
-  var width = $(document).width();
+
+
+
+  // var width = $(document).width();
+
+
   var goUp = this.$node.animate({
     top: "+=100",
-    left: 0,
     left: "+=200"
   }, 1000, function(goDown) {
     // Animation complete.

@@ -6,6 +6,8 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url("src/danceFloor.jpg");
+  
 }
 
 body, a:link, a:visited, a:active{
@@ -27,9 +29,7 @@ body, a:link, a:visited, a:active{
 }
 
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+
 }
 
 .blinkyDancer{
@@ -51,7 +51,17 @@ body, a:link, a:visited, a:active{
   border-right: 30px solid transparent;
   
   border-bottom: 30px solid yellow;
-  position:absolute;
+
+/*  animation-duration: 4s;
+  animation-name: weavingDancer;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;*/
+  position: absolute;
+}
+
+.blinkyDancer:hover, .roamingDancer:hover,
+.roamingDancer:hover, .weavingDancer:hover {
+  transform:scale(5,5);
 }
 
 #lineUp{
@@ -62,3 +72,28 @@ body, a:link, a:visited, a:active{
   float:right;
 }
 
+
+
+/*@keyframes weavingDancer {
+  from {
+    bottom: 5%;
+    right: 5%;
+  }
+  to {
+    bottom: 95%;
+    right: 95%;
+  }
+
+}
+
+@keyframes weavingDancer {
+  from {
+    top: 5%;
+    left: 5%;
+  }
+  to {
+    top: 95%;
+    left: 95%;
+  }
+
+}*/
